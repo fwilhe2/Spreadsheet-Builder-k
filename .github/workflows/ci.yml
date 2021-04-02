@@ -1,0 +1,17 @@
+name: CI
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Create spreadsheet
+      run: |
+        gradle run
+    - uses: actions/upload-artifact@v2
+      with:
+        name: spreadsheet
+        path: app/spreadsheet.xlsx
