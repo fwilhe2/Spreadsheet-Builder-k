@@ -29,6 +29,7 @@ dependencies {
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:29.0-jre'
 
+    compile 'builders.dsl:spreadsheet-builder-data:2.2.1'
     compile 'builders.dsl:spreadsheet-builder-poi:2.2.1'
 
     // Use the Kotlin test library.
